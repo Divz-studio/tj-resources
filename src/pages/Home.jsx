@@ -34,9 +34,16 @@ const Home = () => {
                     <p>We work closely with our clients to understand their unique needs and develop customized solutions that meet their specific requirements.</p>
                 </div>
                 <div className="image-grid">
-                    <img src={img1} alt="" />
-                    <img src={img2} alt="" />
-                    <img src={img3} alt="" />
+                    <div className="img">
+                        <img src={img1} alt="" />
+                    </div>
+                    <div className="img">
+                        <img src={img2} alt="" />
+                    </div>
+                    <div className="img">
+                        <img src={img3} alt="" />
+                    </div>
+                    
                 </div>
             </section>
             <section className="testimonial container">

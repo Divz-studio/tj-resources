@@ -228,6 +228,28 @@ section.network {
   gap: 60px;
 }
 
+.image-grid .img {
+  width: 379px;
+  height: 532px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  transition: .5s all ease-out;
+}
+
+.image-grid .img img {
+  transition: .5s all ease-out;
+}
+
+.image-grid .img:hover {
+  filter: brightness(30%);
+}
+
+.image-grid .img:hover > img {
+  transform: scale(1.2);
+}
+
 .team {
   padding-top: 145px;
   display: flex;
