@@ -32,7 +32,6 @@ const About = () => {
             </div>
         </section>
         <Cta />
-        <Footer />
     </>
   )
 }

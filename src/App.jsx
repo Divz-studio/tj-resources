@@ -4,6 +4,7 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import { Route, Routes } from 'react-router-dom'
 import Layout from "./components/Layout";
+import Login from "./pages/Login";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/login' element={<Login />} />
         </Route>
       </Routes>
     </>
