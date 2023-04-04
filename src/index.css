@@ -265,6 +265,11 @@ section.network {
   box-shadow: 10px 10px 20px 10px rgba(66, 73, 242, 0.1);
   border-radius: 20px;
   text-align: center;
+  transition: all .3s ease-in-out;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.1);
 }
 
 .testimonial-content {
