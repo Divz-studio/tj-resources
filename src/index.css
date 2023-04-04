@@ -59,6 +59,10 @@ span.blue {
   color: #4249F2;
 }
 
+button {
+  cursor: pointer;
+}
+
 .primary-btn {
   background-color: #4249F2;
   display: flex;
@@ -73,6 +77,10 @@ span.blue {
   border-radius: 5px;
 }
 
+.primary-btn img {
+  animation: buttonAnimation 1.6s ease-in-out infinite;
+}
+
 .secondary-btn {
   background-color: #fff;
   display: flex;
@@ -83,6 +91,20 @@ span.blue {
   padding: 24px 48px;
   border-radius: 5px;
   font-weight: bold;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 section {
