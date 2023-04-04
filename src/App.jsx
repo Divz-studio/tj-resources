@@ -5,6 +5,9 @@ import Home from "./pages/Home";
 import { Route, Routes } from 'react-router-dom'
 import Layout from "./components/Layout";
 import Login from "./pages/Login";
+import Inventory from "./pages/Inventory";
+import Dashboard from "./components/Dashboard";
+import History from "./pages/History";
 
 const App = () => {
   return (
@@ -15,6 +18,10 @@ const App = () => {
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/login' element={<Login />} />
+        </Route>
+        <Route path='/admin' element={<Dashboard />}>
+          <Route path="inventory" element={<Inventory />} />
+          <Route path='history' element={<History />} />
         </Route>
       </Routes>
     </>

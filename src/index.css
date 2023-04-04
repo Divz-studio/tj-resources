@@ -100,7 +100,7 @@ nav .container {
   margin-right: 58px;
 }
 
-.active {
+a.active {
   color: #4249F2;
   font-weight: bold;
 }
@@ -401,4 +401,274 @@ textarea {
   justify-content: center;
   gap: 56px;
   padding: 119px 0;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 104px;
+  margin-bottom: 293px;
+}
+
+.login {
+  width: 461px;
+}
+
+.login input {
+  width: 461px;
+}
+
+.login .content {
+  padding-bottom: 29px;
+}
+
+.login .content h2 {
+  padding-bottom: 10px;
+}
+
+.login .input-fields {
+  padding-bottom: 86px;
+}
+
+.login .input-fields input:first-child {
+  margin-bottom: 30px;
+}
+
+.primary-btn-large {
+  width: 461px;
+  height: 58px;
+  background-color: #4249F2;
+  color: #fff;
+  border: 0;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: #FBFBFB;
+}
+
+.dashboard-pages {
+  width: 100%;
+  padding-left: 20em;
+  padding-right: 10em;
+  margin-top: 52px;
+}
+
+.dashboard-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+
+.dashboard-nav .left {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-nav .left .tag {
+  margin-left: 18px;
+}
+
+.search-bar {
+  width: 320px;
+  background-color: #fff;
+  height: 40px;
+  border: 1px solid #B9B9B9;
+  border-radius: 32px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 7px 23px;
+}
+
+.search-bar input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8D8D8D;
+}
+
+.blue-tag {
+  background-color: rgb(101, 98, 255, 0.15);
+  color: #6562FF;
+  font-weight: bold;
+  font-size: 12px;
+  width: 169px;
+  height: 35px;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 259px;
+  background-color: #fff;
+  height: 100vh;
+  padding: 52px 0;
+  border-right: 1px solid #dcdcdc;
+}
+
+.sidebar .top > *:not(:last-child) {
+  margin-bottom: 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar .top .logo {
+  font-size: 16px;
+}
+
+.side-nav-items > *:not(:last-child) {
+  margin-bottom: 31px;
+}
+
+.side-nav-item {
+  width: 172px;
+  height: 38px;
+  border-radius: 10px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.side-nav-item.active {
+  background-color: #4249F2;
+  color: #fff;
+}
+
+.side-nav-item.active > .icon {
+  background-color: #fff;
+}
+
+.icon {
+  background-color: #000;
+  margin-right: 13px;
+  width: 24px;
+  height: 24px;
+}
+
+.logout {
+  position: absolute;
+  margin-bottom: 52px;
+  bottom: 0;
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.equipments {
+  margin: 64px 0;
+}
+
+.equipments .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.primary-btn-medium {
+  width: 177px;
+  height: 49px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #4249F2;
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Table */
+
+.table {
+  margin-top: 33px;
+  border: 1px solid #C2C2C2;
+  border-radius: 7px;
+  overflow: hidden;
+  color: #686868;
+}
+.table-head {
+  background-color: #F0F0F0;
+}
+
+.tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 32px;
+}
+
+.table-data {
+  padding: 13px;
+}
+
+.table-col:not(:last-child) {
+  border-bottom: 1px solid #DCDCDC;
+}
+
+.item {
+  width: 300px;
+}
+
+.quantity {
+  width: 130px;
+}
+
+.date {
+  width: 200px;
+}
+
+.time {
+  width: 160px;
+}
+
+.action {
+  width: 103px;
+}
+
+.edit {
+  cursor: pointer;
+}
+
+/* icons */
+
+.menu-icon {
+  -webkit-mask: url('./assets/icons/menu.svg') no-repeat center;
+  mask: url('./assets/icons/menu.svg') no-repeat center;
+}
+
+.history-icon {
+  -webkit-mask: url('./assets/icons/history.svg') no-repeat center;
+  mask: url('./assets/icons/history.svg') no-repeat center;
+}
+
+.job-icon {
+  -webkit-mask: url('./assets/icons/job.svg') no-repeat center;
+  mask: url('./assets/icons/job.svg') no-repeat center;
+}
+
+.logout-icon {
+  -webkit-mask: url('./assets/icons/logout.svg') no-repeat center;
+  mask: url('./assets/icons/logout.svg') no-repeat center;
 }
