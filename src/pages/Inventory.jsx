@@ -1,12 +1,12 @@
 import React from 'react'
 import DashboardNav from '../components/DashboardNav'
-import Equipments from '../components/Equipments'
+import Tab from '../components/Tab'
 
 const Inventory = () => {
   return (
     <div className="inventory">
         <DashboardNav />
-        <Equipments />
+        <Tab />
     </div>
   )
 }

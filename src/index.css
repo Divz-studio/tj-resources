@@ -625,11 +625,11 @@ textarea {
   font-weight: bold;
 }
 
-.equipments {
+.tab {
   margin: 64px 0;
 }
 
-.equipments .head {
+.tab .head {
   display: flex;
   justify-content: space-between;
   align-items: center;

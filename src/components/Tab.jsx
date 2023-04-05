@@ -1,9 +1,9 @@
 import React from 'react'
 import Table from './Table'
 
-const Equipments = () => {
+const Tab = () => {
   return (
-    <div className="equipments">
+    <div className="tab">
         <div className="head">
             <div className="left">
                 <h3>Equipments</h3>
@@ -16,4 +16,4 @@ const Equipments = () => {
   )
 }
 
-export default Equipments
+export default Tab
