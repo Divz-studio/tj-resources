@@ -23,23 +23,6 @@ const Table = () => {
         </div>
         <div className="table-row">
             <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
-            <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
-            <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
-            <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
-            <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
-            <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
-            <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
-            <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
-            <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
-            <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
-            <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
-            <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
-            <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
-            <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
-            <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
-            <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
-            <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
-            <TableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" />
         </div>
     </div>
   )

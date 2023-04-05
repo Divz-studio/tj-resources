@@ -1,17 +1,16 @@
 import React from 'react'
-import Table from './Table'
 
-const Tab = () => {
+const Tab = ({ title, table, update, btn }) => {
   return (
     <div className="tab">
         <div className="head">
             <div className="left">
-                <h3>Equipments</h3>
-                <p>Last updated an hour ago</p>
+                <h3>{title}</h3>
+               {update && <p>Last updated an hour ago</p>}
             </div>
-            <div className="primary-btn-medium">Add new item</div>
+            {btn && <div className="primary-btn-medium">Add new item</div>}
         </div>
-        <Table />
+        { table }
     </div>
   )
 }
