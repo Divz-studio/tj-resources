@@ -1,7 +1,6 @@
 import React from 'react'
-import edit from '../assets/icons/job.svg'
 
-const TableCol = ({ item, quantity, date, time }) => {
+const HistoryTableCol = ({ item, quantity, date, time, status }) => {
   return (
     <div className="tr table-col">
             <div className="table-data item">
@@ -17,10 +16,12 @@ const TableCol = ({ item, quantity, date, time }) => {
                 {time}
             </div>
             <div className="table-data action">
-               <img src={edit} alt="" className='edit' />
+                <div className={`history-tag ${status}`}>
+                    {status}
+                </div>
             </div>
         </div>
   )
 }
 
-export default TableCol
+export default HistoryTableCol

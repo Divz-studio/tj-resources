@@ -625,11 +625,11 @@ textarea {
   font-weight: bold;
 }
 
-.equipments {
+.tab {
   margin: 64px 0;
 }
 
-.equipments .head {
+.tab .head {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -698,6 +698,27 @@ textarea {
 
 .edit {
   cursor: pointer;
+}
+
+.history-tag {
+  width: 91px;
+  height: 21px;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.history-tag.added {
+  background-color: hsla(155, 100%, 35%, 0.123);
+  color:#00B066;
+}
+
+.history-tag.deleted {
+  background-color: hsla(0, 100%, 62%, 0.123);
+  color:#FF3D3D;
 }
 
 /* icons */
