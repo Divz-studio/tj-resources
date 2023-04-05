@@ -59,6 +59,10 @@ span.blue {
   color: #4249F2;
 }
 
+button {
+  cursor: pointer;
+}
+
 .primary-btn {
   background-color: #4249F2;
   display: flex;
@@ -73,6 +77,10 @@ span.blue {
   border-radius: 5px;
 }
 
+.primary-btn img {
+  animation: buttonAnimation 1.6s ease-in-out infinite;
+}
+
 .secondary-btn {
   background-color: #fff;
   display: flex;
@@ -83,6 +91,20 @@ span.blue {
   padding: 24px 48px;
   border-radius: 5px;
   font-weight: bold;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 section {
@@ -228,6 +250,28 @@ section.network {
   gap: 60px;
 }
 
+.image-grid .img {
+  width: 379px;
+  height: 532px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  transition: .5s all ease-out;
+}
+
+.image-grid .img img {
+  transition: .5s all ease-out;
+}
+
+.image-grid .img:hover {
+  filter: brightness(30%);
+}
+
+.image-grid .img:hover > img {
+  transform: scale(1.2);
+}
+
 .team {
   padding-top: 145px;
   display: flex;
@@ -265,6 +309,11 @@ section.network {
   box-shadow: 10px 10px 20px 10px rgba(66, 73, 242, 0.1);
   border-radius: 20px;
   text-align: center;
+  transition: all .3s ease-in-out;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.1);
 }
 
 .testimonial-content {
