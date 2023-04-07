@@ -14,6 +14,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 h1 {
   font-size: 64px;
   font-weight: bold;
@@ -46,7 +50,8 @@ p.small {
 
 .container {
   margin: auto;
-  width: 1348px;
+  max-width: 1280px;
+  width: 70em;
 }
 
 a {
@@ -178,6 +183,14 @@ section.network {
   gap: 7em;
 }
 
+.network .content-block {
+  flex: 0.5;
+}
+
+.network > img {
+  flex: 0.4;
+}
+
 .network .content-block > p {
   padding: 39px 0;
 }
@@ -191,13 +204,10 @@ section.network {
 
 .cards {
   display: flex;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 154px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .card {
@@ -246,13 +256,14 @@ section.network {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   padding: 0px;
   gap: 60px;
 }
 
 .image-grid .img {
-  width: 379px;
-  height: 532px;
+  width: 25%;
+  max-height: 532px;
   border-radius: 10px;
   background-repeat: no-repeat;
   background-position: center;
@@ -289,10 +300,14 @@ section.network {
   padding: 100px 0;
   align-items: center;
   gap: 24px;
+  width: 200%;
 }
 
 .testimonial-grid {
   display: flex;
+  align-items: center;
+  width: 100%;
+  height: 340px;
   gap: 67px;
 }
 
@@ -302,7 +317,7 @@ section.network {
   justify-content: center;
   align-items: center;
   padding: 45px 30px;
-  width: 287px;
+  max-width: 340px;
   height: 304px;
   gap: 27px;
   background: #FFFFFF;
@@ -340,6 +355,7 @@ section.network {
   background-color: #4249F2;
   color: #fff;
   margin-bottom: 116px;
+  width: 100%;
 }
 
 .cta .container {
