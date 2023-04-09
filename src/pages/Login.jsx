@@ -18,6 +18,8 @@ const Login = () => {
                     console.log("Email sent")
                 })
             }
+        }).catch((err) => {
+            alert(err.message)
         })
     }
 

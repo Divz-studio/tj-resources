@@ -46,15 +46,17 @@ const Home = () => {
                     
                 </div>
             </section>
-            {/* <section className="testimonial">
-                <div className="testimonial-content">
-                    <h3>What our clients say about us</h3>
-                    <p>Here's what our clients got to say after experiencing our wonderful services</p>
+            <section className="testimonial">
+                <div className="container">
+                    <div className="testimonial-content">
+                        <h3>What our clients say about us</h3>
+                        <p>Here's what our clients got to say after experiencing our wonderful services</p>
+                    </div>
+                    <div className="testimonial-grid">
+                        <TestimonialGrid />
+                    </div>
                 </div>
-                <div className="testimonial-grid">
-                    <TestimonialGrid />
-                </div>
-            </section> */}
+            </section>
             <Cta />
         </>
     )

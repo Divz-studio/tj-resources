@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', Lato, sans-serif;
 }
 
 img {
@@ -20,22 +20,44 @@ img {
 
 h1 {
   font-size: 64px;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 h2 {
   font-size: 48px;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 h3 {
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 h4 {
   font-size: 24px;
   font-weight: bold;
+}
+
+@media (max-width: 674px) {
+  h1 {
+    font-size: 48px;
+    font-weight: 800;
+  }
+  
+  h2 {
+    font-size: 36px;
+    font-weight: 800;
+  }
+  
+  h3 {
+    font-size: 24px;
+    font-weight: 800;
+  }
+  
+  h4 {
+    font-size: 20px;
+    font-weight: bold;
+  }
 }
 
 p {
@@ -50,14 +72,22 @@ p.small {
 
 .container {
   margin: auto;
-  max-width: 1280px;
-  width: 70em;
+  max-width: 80em;
+  width: 80%;
 }
 
 a {
   text-decoration: none;
   color: #000;
   font-size: 16px;
+}
+
+nav a:hover {
+  color:#4249F2;
+}
+
+footer a:hover {
+  color:#4249F2;
 }
 
 span.blue {
@@ -113,10 +143,49 @@ button {
 }
 
 section {
-  padding: 109px 0;
+  padding: 55px 0;
+}
+
+nav {
+  position: relative;
+  background-color: #fff;
+  z-index: 999;
 }
 
 nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.hamburger-menu {
+  font-size: 36px;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-menu {
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  top: 86px;
+  background-color: #fff;
+  width: 100%;
+  left: 0;
+  z-index: 999;
+  transition: all .5s ease-in;
+  box-shadow: 0 10px 5px #00000007;
+}
+
+.nav-menu .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 2em 0;
+}
+
+.footer-container .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -124,6 +193,15 @@ nav .container {
 }
 
 .nav-links > a:not(:last-child){
+  margin-right: 58px;
+}
+
+.footer-nav-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-nav-links > a:not(:last-child){
   margin-right: 58px;
 }
 
@@ -141,7 +219,7 @@ a.active {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  padding-top: 113px;
+  padding-top: 40px;
 }
 
 .hero-content.about {
@@ -157,11 +235,11 @@ a.active {
 .hero-section .container {
   display: flex;
   flex-direction: column;
-  gap: 130px;
+  gap: 50px;
 }
 
 .hero-image {
-  max-width: 1115px;
+  /* width: 70%; */
   align-self: center;
 }
 
@@ -174,21 +252,25 @@ a.active {
 
 .clients img {
   filter: grayscale(50);
+  /* width: 70%; */
 }
 
 section.network {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 7em;
+  flex-wrap: wrap;
+  gap: 3em;
 }
 
 .network .content-block {
-  flex: 0.5;
+  flex: 0.8;
 }
 
 .network > img {
-  flex: 0.4;
+  flex: 0.2;
+  width: 480px;
+  max-width: 100%;
 }
 
 .network .content-block > p {
@@ -208,6 +290,7 @@ section.network {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  gap: 54px;
 }
 
 .card {
@@ -253,22 +336,20 @@ section.network {
 
 .image-grid {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  padding: 0px;
+  justify-content: center;
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center; */
   gap: 60px;
 }
 
 .image-grid .img {
-  width: 25%;
+  max-width: 340px;
   max-height: 532px;
   border-radius: 10px;
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
-  transition: .5s all ease-out;
 }
 
 .image-grid .img img {
@@ -296,18 +377,22 @@ section.network {
 }
 
 .testimonial {
+  margin: 30px 0;
+}
+
+.testimonial .container{
   display: flex;
-  padding: 100px 0;
   align-items: center;
-  gap: 24px;
-  width: 200%;
+  flex-direction: column;
+  gap: 34px;
 }
 
 .testimonial-grid {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
-  height: 340px;
   gap: 67px;
 }
 
@@ -317,7 +402,7 @@ section.network {
   justify-content: center;
   align-items: center;
   padding: 45px 30px;
-  max-width: 340px;
+  width: 340px;
   height: 304px;
   gap: 27px;
   background: #FFFFFF;
@@ -332,9 +417,10 @@ section.network {
 }
 
 .testimonial-content {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 25px;
 }
 
 .team p {
@@ -368,7 +454,7 @@ section.network {
 }
 
 .cta h2 {
-  width: 471px;
+  max-width: 471px;
   text-align: center;
 }
 
@@ -379,8 +465,13 @@ footer .copyright {
 }
 
 .grid .col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.grid .col > * {
+  max-width: 50%;
 }
 
 .row {
@@ -402,12 +493,13 @@ footer .copyright {
 }
 
 .contact-hero h1 {
-  width: 556px;
+  max-width: 556px;
   text-align: center;
 }
 
 .info {
   display: flex;
+  flex-wrap: wrap;
   padding-top: 56px;
 }
 
@@ -431,16 +523,17 @@ footer .copyright {
 
 .contact-form .col {
   display: flex;
-  gap: 34px;
+  gap: 0px;
 }
 
 input.small-input {
-  width: 318px;
+  max-width: 318px;
+  width: 50%;
 }
 
 input {
   border: 1px solid #4E4E4E;
-  width: 670px;
+  max-width: 670px;
   height: 58px;
   padding: 0 19px;
   border-radius: 10px;
@@ -448,7 +541,7 @@ input {
 
 
 textarea {
-  width: 670px;
+  max-width: 670px;
   height: 275px;
   border: 1px solid #4E4E4E;
   padding: 32px 19px;
@@ -456,7 +549,7 @@ textarea {
 }
 
 .primary-btn.large {
-  width: 670px;
+  max-width: 670px;
 }
 
 .address {
@@ -735,6 +828,62 @@ textarea {
 .history-tag.deleted {
   background-color: hsla(0, 100%, 62%, 0.123);
   color:#FF3D3D;
+}
+
+/* Responsiveness */
+
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 621px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: start;
+    gap: 3em;
+  }
+}
+
+@media (max-width: 820px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-menu {
+    display: block;
+  }
+
+  .footer-container .container {
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .footer-nav-links {
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+  }
+
+  .footer-nav-links > a:not(:last-child){
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 818px) {
+  .network .content-block {
+    width: 100%;
+    flex: 1;
+  }
+
+  .network img {
+    flex: 1;
+    width: 100%;
+  }
 }
 
 /* icons */

@@ -28,9 +28,9 @@ const App = () => {
             <Login />
           } />
         <Route path='/admin' element={
-          <ProtectedRoute>
             <Dashboard />
-          </ProtectedRoute>
+          // <ProtectedRoute>
+          // </ProtectedRoute>
         }>
           <Route path="inventory" element={<Inventory />} />
           <Route path='history' element={<History />} />
