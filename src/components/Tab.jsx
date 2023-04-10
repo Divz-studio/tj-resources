@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Modal from './Modal'
 
 const Tab = ({ title, table, update, btn }) => {
-  const [toggleModal, setToggleModal] = useState(true)
+  const [toggleModal, setToggleModal] = useState(false)
 
   return (
     <div className="tab">
