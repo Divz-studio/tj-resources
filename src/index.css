@@ -468,12 +468,26 @@ footer .copyright {
 
 .grid .col {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   width: 100%;
 }
 
 .grid .col > * {
-  max-width: 50%;
+  min-width: 50%;
+  width: 340px;
+  height: 350px;
+}
+
+.grid .col > img {
+  object-fit: cover;
+}
+
+@media (max-width: 940px) {
+  .grid .col .row > h4 {
+    font-size: 18px;
+  }
 }
 
 .row {
@@ -483,7 +497,7 @@ footer .copyright {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 52px;
+  padding: 52px 20px;
 }
 
 .contact-hero {
