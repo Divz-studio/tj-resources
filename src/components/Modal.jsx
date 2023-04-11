@@ -7,7 +7,7 @@ const Modal = ({ toggleModal, setToggleModal }) => {
   return (
     <div style={{display: toggleModal ? "flex" : "none"}}>
         <div onClick={() => setToggleModal(false)} className="overlay"></div>
-        <EditItem />
+        <NewItem />
     </div>
   )
 }

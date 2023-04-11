@@ -38,6 +38,11 @@ h4 {
   font-weight: bold;
 }
 
+button {
+  border: 0;
+  cursor: pointer;
+}
+
 @media (max-width: 674px) {
   h1 {
     font-size: 48px;
