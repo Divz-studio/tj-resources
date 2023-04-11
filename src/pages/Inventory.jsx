@@ -2,6 +2,7 @@ import React from 'react'
 import DashboardNav from '../components/DashboardNav'
 import Tab from '../components/Tab'
 import Table from '../components/Table'
+import Modal from '../components/Modal'
 
 const Inventory = () => {
   return (

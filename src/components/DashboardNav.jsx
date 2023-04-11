@@ -2,6 +2,7 @@ import React from 'react'
 import search from '../assets/icons/search.svg'
 
 const DashboardNav = ({ title, showTag, searchPlaeholder }) => {
+
   return (
     <div className="dashboard-nav">
         <div className="left">

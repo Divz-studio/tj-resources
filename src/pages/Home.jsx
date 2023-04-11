@@ -13,7 +13,7 @@ import Footer from '../components/Footer';
 
 const Home = () => {
     return (
-        <div className="home">
+        <>
             <div className="hero-section">
                 <div className="container">
                     <div className="hero-content">
@@ -46,17 +46,19 @@ const Home = () => {
                     
                 </div>
             </section>
-            <section className="testimonial container">
-                <div className="testimonial-content">
-                    <h3>What our clients say about us</h3>
-                    <p>Here's what our clients got to say after experiencing our wonderful services</p>
-                </div>
-                <div className="testimonial-grid">
-                    <TestimonialGrid />
+            <section className="testimonial">
+                <div className="container">
+                    <div className="testimonial-content">
+                        <h3>What our clients say about us</h3>
+                        <p>Here's what our clients got to say after experiencing our wonderful services</p>
+                    </div>
+                    <div className="testimonial-grid">
+                        <TestimonialGrid />
+                    </div>
                 </div>
             </section>
             <Cta />
-        </div>
+        </>
     )
 }
 
