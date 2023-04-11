@@ -1,12 +1,13 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
+import { getFirestore, onSnapshot, doc, collection } from 'firebase/firestore'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBJaYYJ4XK6uY8tZ19FerhsZD0Fp1vV-e0",
+  apiKey: import.meta.env.VITE_APP_API_KEY,
   authDomain: "tj-resources.firebaseapp.com",
   projectId: "tj-resources",
   storageBucket: "tj-resources.appspot.com",
@@ -18,4 +19,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth()
 
-export { auth }
+const db = getFirestore()
+
+
+export { auth, db }
