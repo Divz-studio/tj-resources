@@ -13,7 +13,7 @@ import Footer from '../components/Footer';
 
 const Home = () => {
     return (
-        <div className="home">
+        <>
             <div className="hero-section">
                 <div className="container">
                     <div className="hero-content">
@@ -34,23 +34,31 @@ const Home = () => {
                     <p>We work closely with our clients to understand their unique needs and develop customized solutions that meet their specific requirements.</p>
                 </div>
                 <div className="image-grid">
-                    <img src={img1} alt="" />
-                    <img src={img2} alt="" />
-                    <img src={img3} alt="" />
+                    <div className="img">
+                        <img src={img1} alt="" />
+                    </div>
+                    <div className="img">
+                        <img src={img2} alt="" />
+                    </div>
+                    <div className="img">
+                        <img src={img3} alt="" />
+                    </div>
+                    
                 </div>
             </section>
-            <section className="testimonial container">
-                <div className="testimonial-content">
-                    <h3>What our clients say about us</h3>
-                    <p>Here's what our clients got to say after experiencing our wonderful services</p>
-                </div>
-                <div className="testimonial-grid">
-                    <TestimonialGrid />
+            <section className="testimonial">
+                <div className="container">
+                    <div className="testimonial-content">
+                        <h3>What our clients say about us</h3>
+                        <p>Here's what our clients got to say after experiencing our wonderful services</p>
+                    </div>
+                    <div className="testimonial-grid">
+                        <TestimonialGrid />
+                    </div>
                 </div>
             </section>
             <Cta />
-            <Footer />
-        </div>
+        </>
     )
 }
 
