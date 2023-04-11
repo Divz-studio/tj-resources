@@ -9,11 +9,28 @@ import Inventory from "./pages/Inventory";
 import Dashboard from "./components/Dashboard";
 import History from "./pages/History";
 import ProtectedRoute from "./components/ProtectedRoute";
-import { useState } from "react";
-import { auth } from "./Firebase";
+import { useEffect, useState } from "react";
+import { auth, db } from "./Firebase";
+import { collection, doc, onSnapshot } from "firebase/firestore";
 import ScrollToTop from "./components/ScrollToTop";
+import { useContext } from "react";
+import { AppContext } from "./context/AppContext";
 
 const App = () => {
+  const { equipments, setEquipments } = useContext(AppContext)
+
+  useEffect(() => {
+    const colRef = collection(db, 'equipments')
+
+    onSnapshot(colRef, (snapshot) => {
+    let equipmentRef = []
+    snapshot.docs.forEach(doc => {
+      equipmentRef.push({  ...doc.data(), id: doc.id })
+    })
+    setEquipments(equipmentRef)
+    })
+
+  }, [])
 
   return (
     <>
