@@ -6,7 +6,7 @@ import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBJaYYJ4XK6uY8tZ19FerhsZD0Fp1vV-e0",
+  apiKey: import.meta.env.VITE_APP_API_KEY,
   authDomain: "tj-resources.firebaseapp.com",
   projectId: "tj-resources",
   storageBucket: "tj-resources.appspot.com",
