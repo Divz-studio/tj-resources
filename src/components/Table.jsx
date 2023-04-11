@@ -1,6 +1,6 @@
 import React from 'react'
 import TableCol from './TableCol'
-import { equipments } from '../constant'
+import { equipments } from '../constants'
 
 const Table = () => {
   return (

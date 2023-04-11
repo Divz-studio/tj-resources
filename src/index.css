@@ -1027,6 +1027,11 @@ textarea {
   color:#FF3D3D;
 }
 
+.history-tag.pending {
+  background-color: hsla(48, 100%, 62%, 0.123);
+  color:#ffc53d;
+}
+
 /* Responsiveness */
 
 @media (max-width: 1024px) {

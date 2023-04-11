@@ -22,7 +22,7 @@ const HistoryTable = () => {
             </div>
         </div>
         <div className="table-row">
-            <HistoryTableCol item="Single Face Plate" quantity={1} date="Apr 25th, 2023" time="10:50am" status="added" />
+            <HistoryTableCol item="Single Face Plate" quantity={1} date="Apr 25th, 2023" time="10:50am" status="pending" />
             <HistoryTableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" status="deleted" />
             <HistoryTableCol item="Single Face Plate" quantity={2} date="Apr 25th, 2023" time="10:50am" status="deleted" />
             <HistoryTableCol item="Single Face Plate" quantity={20} date="Apr 25th, 2023" time="10:50am" status="deleted" />
