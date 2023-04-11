@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import DashboardNav from '../components/DashboardNav'
 import Tab from '../components/Tab'
 import Table from '../components/Table'
-import Modal from '../components/Modal'
+import { AppContext } from '../context/AppContext'
 
 const Inventory = () => {
+
   return (
     <div className="inventory">
         <DashboardNav title="Inventory" showTag={true} searchPlaeholder="Search for equipments" />
