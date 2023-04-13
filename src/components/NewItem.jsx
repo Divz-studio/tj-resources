@@ -1,7 +1,37 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import edit from "../assets/icons/edit.svg"
+import { collection, addDoc } from 'firebase/firestore'
+import { db } from '../Firebase'
 
 const NewItem = () => {
+    const nameRef = useRef()
+    const quantityRef = useRef()
+
+    const addItem = (e) => {
+        e.preventDefault()
+
+        // Get Time
+        const date = new Date()
+        const hour = date.getHours()
+        const minute = date.getMinutes()
+        const formatedMinute = minute <= 9 ? `0${minute}` : minute
+        const ampm = hour >= 12 ? 'pm' : 'am'
+        const colRef = collection(db, 'equipments')
+
+        // Add document to firebase
+        addDoc(colRef, {
+            name: nameRef.current.value,
+            quantity: quantityRef.current.value,
+            time: `${hour}:${formatedMinute} ${ampm}`
+        })
+
+        nameRef.current.value = ''
+        quantityRef.current.value = ''
+
+        // console.log(nameRef.current.value)
+        // console.log(quantityRef.current.value)
+    }
+
   return (
     <div className="newItem modal">
         <div className="modal__container">
@@ -11,21 +41,17 @@ const NewItem = () => {
                 <h4>Add new item</h4>
                </div>
             </div>
-            <div className="modal__form">
+            <form className="modal__form" onSubmit={addItem}>
                 <div className="modal__input">
                     <p>Name of equipment</p>
-                    <input type="text" />
+                    <input ref={nameRef} type="text" />
                 </div>
-                <div className="newItem__input-quantity">
+                <div className="modal__input">
                             <p>Quantity</p>
-                            <select name="" id="">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
+                            <input ref={quantityRef} type="text" />
                         </div>
-            </div>
-            <div className="modal__btn">Add</div>
+            <button className="modal__btn">Add</button>
+            </form>
             
         </div>
     </div>
