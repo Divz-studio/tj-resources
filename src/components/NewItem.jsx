@@ -9,12 +9,24 @@ const NewItem = () => {
 
     const addItem = (e) => {
         e.preventDefault()
+
+        // Get Time
+        const date = new Date()
+        const hour = date.getHours()
+        const minute = date.getMinutes()
+        const formatedMinute = minute <= 9 ? `0${minute}` : minute
+        const ampm = hour >= 12 ? 'pm' : 'am'
         const colRef = collection(db, 'equipments')
 
+        // Add document to firebase
         addDoc(colRef, {
             name: nameRef.current.value,
             quantity: quantityRef.current.value,
+            time: `${hour}:${formatedMinute} ${ampm}`
         })
+
+        nameRef.current.value = ''
+        quantityRef.current.value = ''
 
         // console.log(nameRef.current.value)
         // console.log(quantityRef.current.value)
@@ -34,13 +46,9 @@ const NewItem = () => {
                     <p>Name of equipment</p>
                     <input ref={nameRef} type="text" />
                 </div>
-                <div className="newItem__input-quantity">
+                <div className="modal__input">
                             <p>Quantity</p>
-                            <select name="" id="" ref={quantityRef}>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
+                            <input ref={quantityRef} type="text" />
                         </div>
             <button className="modal__btn">Add</button>
             </form>
